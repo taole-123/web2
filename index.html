@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>永夜幸存者</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"> </head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div id="hud" style="display: none;">
+            <div class="hud-row">
+                <div id="hud-hp" class="hud-item">HP: <span id="hud-hp-value">100/100</span></div>
+                <div id="hud-level" class="hud-item">等级: <span id="hud-level-value">1</span></div>
+            </div>
+            <div class="hud-row">
+                <div id="hud-xp" class="hud-item">经验: <span id="hud-xp-value">0/100</span></div>
+                <div id="hud-xp-bar-container" class="hud-item">
+                    <div id="hud-xp-bar"><div id="hud-xp-bar-fill"></div></div>
+                </div>
+            </div>
+            <div class="hud-row">
+                <div id="hud-timer" class="hud-item">时间: <span id="hud-timer-value">00:00</span></div>
+                <div id="hud-kill-count" class="hud-item">击杀: <span id="hud-kill-count-value">0</span></div>
+            </div>
+            <div id="hud-relics-container" class="hud-item">
+                <h4>圣物:</h4>
+                <ul id="hud-relics-list"></ul>
+            </div>
+            </div>
+
+        <div id="hero-selection-screen" class="ui-screen" style="display: none;">
+            <h2>选择你的英雄</h2>
+            <div id="hero-options-container"></div>
+            <button id="confirm-hero-selection">确认选择</button>
+        </div>
+
+        <div id="upgrade-screen" class="ui-screen" style="display: none;">
+            <div id="upgrade-options-container"></div>
+        </div>
+
+        <div id="game-over-screen" class="ui-screen" style="display: none;">
+            <h2>游戏结束</h2>
+            <p>存活时间: <span id="stats-time">00:00</span></p>
+            <p>击杀数: <span id="stats-kills">0</span></p>
+            <p>最终等级: <span id="stats-level">1</span></p>
+            <button id="restart-game-button">重新开始</button>
+        </div>
+
+        <div id="pause-menu" class="ui-screen" style="display:none;">
+            <h2>游戏暂停</h2>
+            <button id="resume-game-button">继续游戏</button>
+            <button id="quit-to-menu-button">返回主菜单</button> 
+        </div>
+    </div>
+
+    <script src="js/config/gameConstants.js"></script>
+
+    <script src="js/config/heroes.js"></script>
+    <script src="js/config/levels.js"></script>
+    <script src="js/config/enemies.js"></script>
+    <script src="js/config/weapons.js"></script>
+    <script src="js/config/skills.js"></script>
+    <script src="js/config/relics.js"></script>
+
+    <script src="js/utils/helpers.js"></script>
+
+    <script src="js/core/weapon.js"></script>
+    <script src="js/core/player.js"></script>
+    <script src="js/core/enemy.js"></script>
+    <script src="js/core/loot.js"></script>
+    <script src="js/core/spawner.js"></script>
+    
+    <script src="js/ui/hud.js"></script>
+    <script src="js/ui/upgradeScreen.js"></script>
+    <script src="js/ui/uiManager.js"></script>
+
+    <script src="js/core/gameController.js"></script>
+
+    <script src="js/main.js"></script> 
+
+</body>
+</html>
